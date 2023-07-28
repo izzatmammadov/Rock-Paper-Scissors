@@ -27,7 +27,7 @@
 }
 
 .intro h1 {
-  font-size: 80px;
+  font-size: 64px;
 }
 
 .intro-btn-group {
@@ -96,6 +96,10 @@
 #human-hand,
 #computer-hand {
   width: 28%;
+}
+
+#computer-hand {
+    transform: scaleX(-1);
 }
 
 .btn-group {
