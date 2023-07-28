@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Rock Paper Scissors</title>
+  </head>
+  <body>
+    <main class="main-container">
+
+      <div id="intro" class="intro">
+        <h1>Are you ready?</h1>
+        <div class="intro-btn-group">
+          <button onclick="startGame()">Let's Play!</button>
+          <button onclick="cancelGame()">Cancel</button>
+        </div>
+      </div>
+
+      <div id="game" class="game">
+        <div class="score-container">
+          <div class="human-score">
+            <p id="human-score">0</p>
+            <span>YOU</span>
+          </div>
+          <div class="computer-score">
+            <p id="computer-score">0</p>
+            <span>AI</span>
+          </div>
+        </div>
+
+        <div class="image-container">
+          <img id="human-hand" src="./images/hrock.png" alt="#" />
+          <img id="computer-hand" src="./images/crock.png" alt="#" />
+        </div>
+
+        <div class="btn-group">
+          <button id="rock">R</button>
+          <button id="paper">P</button>
+          <button id="scissors">S</button>
+        </div>
+      </div>
+    </main>
+    <script src="main.js"></script>
+  </body>
+</html>
