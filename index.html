@@ -8,7 +8,6 @@
   </head>
   <body>
     <main class="main-container">
-
       <div id="intro" class="intro">
         <h1>Are you ready?</h1>
         <div class="intro-btn-group">
@@ -20,24 +19,27 @@
       <div id="game" class="game">
         <div class="score-container">
           <div class="human-score">
-            <p id="human-score">0</p>
+            <p id="humanScore">0</p>
             <span>YOU</span>
           </div>
           <div class="computer-score">
-            <p id="computer-score">0</p>
+            <p id="computerScore">0</p>
             <span>AI</span>
           </div>
         </div>
 
         <div class="image-container">
-          <img id="human-hand" src="./images/r.png" alt="#" />
-          <img id="computer-hand" src="./images/r.png" alt="#" />
+          <img id="humanHand" src="./images/r.png" alt="#" />
+          <!-- <div class="draw-container">
+            <p id="playerDraw">DRAW!</p>
+          </div> -->
+          <img id="computerHand" src="./images/r.png" alt="#" />
         </div>
 
         <div class="btn-group">
-          <button id="rock">R</button>
-          <button id="paper">P</button>
-          <button id="scissors">S</button>
+          <button onclick="rockBtn()">R</button>
+          <button onclick="paperBtn()">P</button>
+          <button onclick="scissorsBtn()">S</button>
         </div>
       </div>
     </main>

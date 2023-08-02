@@ -1,12 +1,16 @@
 const intro = document.getElementById("intro");
 const game = document.getElementById("game");
-const humanScore = document.getElementById("human-score");
-const computerScore = document.getElementById("computer-score");
-const rock = document.getElementById("rock");
-const paper = document.getElementById("paper");
-const scissors = document.getElementById("scissors");
+
+const humanScore = document.getElementById("humanScore");
+const humanHand = document.getElementById("humanHand");
+
+const computerScore = document.getElementById("computerScore");
+const computerHand = document.getElementById("computerHand");
 
 // intro page codes
+
+let myScore = 0;
+let compScore = 0;
 
 function playGame() {
   intro.style.display = "none";
@@ -19,37 +23,46 @@ function cancelGame() {
 
 // game page codes
 
-let youScore = 0;
-let compScore = 0;
-
-let hands = ["r", "p", "s"];
-
-function randomHandSelector(arr) {
-  let randomHand = Math.floor(Math.random() * arr.length);
-  return arr[randomHand];
+function randomHandSelector() {
+  let hands = ["r", "p", "s"];
+  let randomHand = Math.floor(Math.random() * 3);
+  computerHand.setAttribute("src", `./images/${hands[randomHand]}.png`);
+  return hands[randomHand];
 }
 
-let compChoose = randomHandSelector(hands);
+function rockBtn() {
+  humanHand.setAttribute("src", `./images/r.png`);
+  let compCheck = randomHandSelector();
+  result("r", compCheck);
+}
 
-function startGame(e) {
-  let yourChoose = e.key;
+function paperBtn() {
+  humanHand.setAttribute("src", `./images/p.png`);
+  let compCheck = randomHandSelector();
+  result("p", compCheck);
+}
 
-  if (!hands.includes(yourChoose)) {
-    alert("PLEASE CHOOSE CORRET ITEM 'R' rock, 'P' paper, 'S' scissors");
-    return;
+function scissorsBtn() {
+  humanHand.setAttribute("src", `./images/s.png`);
+  let compCheck = randomHandSelector();
+  result("s", compCheck);
+}
+
+function result(user, computer) {
+  if (
+    (user === "r" && computer === "s") ||
+    (user === "p" && computer === "r") ||
+    (user === "s" && computer === "p")
+  ) {
+    myScore++;
+  } else if (
+    (computer === "r" && user === "s") ||
+    (computer === "p" && user === "r") ||
+    (computer === "s" && user === "p")
+  ) {
+    compScore++;
   }
+
+  humanScore.textContent = myScore;
+  computerScore.textContent = compScore;
 }
-
-window.onkeydown = startGame;
-console.log(yourChoose);
-
-console.log(compChoose);
-
-// function showHands (you,computer) {
-//     humanScore.innerHTML = you;
-//     computerScore.innerHTML = computer;
-
-//     humanScore.src = `./images/${you}.png`;
-//     computerScore.src = `./images/${computer}.png`;
-
-// }
