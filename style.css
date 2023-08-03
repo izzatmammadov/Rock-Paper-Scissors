@@ -9,8 +9,8 @@
 .main-container {
   height: 100vh;
   background: #83bdff;
-  padding-top: 10px;
   position: relative;
+  padding-top: 20px;
 }
 
 /* INTRO WINDOW */
@@ -61,21 +61,41 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 200px;
-  margin-bottom: 20px;
+  gap: 100px;
   color: #fff;
 }
 
-/* .draw-container {
+.result-div span {
+  font-size: 22px;
+  color: #fff;
+}
+
+.result-div p {
+  font-size: 18px;
+  color: #000;
+}
+
+.result-container {
+  display: flex;
   text-align: center;
+  justify-content: center;
+  align-items: center;
   width: 10%;
 }
 
-#playerDraw {
+#playerLose,
+#playerWin {
   display: none;
   font-size: 50px;
-  color: #ddff00;
-} */
+}
+
+#playerWin {
+  color: #37ff00;
+}
+
+#playerLose {
+  color: #ff0000;
+}
 
 .human-score,
 .computer-score {
@@ -88,6 +108,7 @@
 
 .human-score span {
   font-size: 20px;
+  color: #000;
 }
 
 .computer-score p {
@@ -96,6 +117,7 @@
 
 .computer-score span {
   font-size: 20px;
+  color: #000;
 }
 
 .image-container {
