@@ -9,7 +9,6 @@ const computerHand = document.getElementById("computerHand");
 
 const playerWin = document.getElementById("playerWin");
 const playerLose = document.getElementById("playerLose");
-const playerDraw = document.getElementById("playerDraw");
 
 const winResult = document.getElementById("winResult");
 const loseResult = document.getElementById("loseResult");
