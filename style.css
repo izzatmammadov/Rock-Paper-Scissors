@@ -159,3 +159,44 @@
   transform: translateY(-10px);
   transition: all 0.4s;
 }
+
+/* RESPONSIVE DESIGN */
+
+@media screen and (min-width: 300px) and (max-width: 1111px) {
+  .intro h1 {
+    font-size: 26px;
+  }
+
+  .intro-btn-group {
+    gap: 30px;
+  }
+
+  .intro-btn-group button {
+    font-size: 16px;
+  }
+
+  #playerLose,
+  #playerWin {
+    font-size: 24px;
+  }
+
+  .result-div span {
+    font-size: 14px;
+  }
+
+  .result-div p {
+    font-size: 14px;
+  }
+
+  .image-container {
+    gap: 30px;
+  }
+
+  .score-container {
+    gap: 60px;
+  }
+
+  .btn-group {
+    gap: 50px;
+  }
+}
