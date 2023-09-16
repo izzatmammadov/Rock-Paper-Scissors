@@ -172,7 +172,7 @@
 @media screen and (min-width: 300px) and (max-width: 1111px) {
   
   .intro h1 {
-    font-size: 26px;
+    font-size: 40px;
   }
 
   .intro-btn-group {
@@ -180,7 +180,7 @@
   }
 
   .intro-btn-group button {
-    font-size: 14px;
+    font-size: 18px;
   }
 
   #playerLose,
@@ -189,11 +189,11 @@
   }
 
   .result-div span {
-    font-size: 14px;
+    font-size: 18px;
   }
 
   .result-div p {
-    font-size: 14px;
+    font-size: 18px;
   }
 
   .image-container {
@@ -206,6 +206,7 @@
   }
 
   .btn-group {
+    margin-top: 60px;
     gap: 50px;
   }
 }
