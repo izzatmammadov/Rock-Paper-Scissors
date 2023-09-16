@@ -26,7 +26,7 @@ function playGame() {
 }
 
 function cancelGame() {
-  alert("YOU ARE A LOSER!");
+window.close()
 }
 
 // game page codes

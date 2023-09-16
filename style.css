@@ -15,12 +15,13 @@
   height: 100vh;
   background: #83bdff;
   position: relative;
-  padding-top: 20px;
+  /* padding-top: 20px; */
 }
 
 /* INTRO WINDOW */
 
 .intro {
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -44,10 +45,11 @@
   font-size: 22px;
   padding: 6px 22px;
   background: #fff;
-  border: 3px solid #83bdff;
+  border: none;
   border-radius: 10px;
   color: #000;
   cursor: pointer;
+  box-shadow: 0px 0px 10px 0px #00000881;
 }
 
 .intro-btn-group button:hover {
@@ -130,7 +132,6 @@
   align-items: center;
   justify-content: space-evenly;
   height: 55vh;
-  margin-bottom: 40px;
 }
 
 .image-container img {
@@ -153,11 +154,12 @@
 .btn-group button {
   padding: 22px 26px;
   border-radius: 50%;
-  border: 3px solid #83bdff;
+  border: none;
   font-size: 22px;
   cursor: pointer;
   font-size: 22px;
   background: #fff;
+  box-shadow: 0px 0px 10px 0px #00000881;
 }
 
 .btn-group button:hover {
@@ -168,6 +170,7 @@
 /* RESPONSIVE DESIGN */
 
 @media screen and (min-width: 300px) and (max-width: 1111px) {
+  
   .intro h1 {
     font-size: 26px;
   }
@@ -177,7 +180,7 @@
   }
 
   .intro-btn-group button {
-    font-size: 16px;
+    font-size: 14px;
   }
 
   #playerLose,
@@ -195,6 +198,7 @@
 
   .image-container {
     gap: 30px;
+    height: 35vh;
   }
 
   .score-container {
